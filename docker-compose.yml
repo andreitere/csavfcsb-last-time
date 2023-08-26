@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    image: csa-v-fcsb:1
     build: .
     ports:
       - "8899:80"
