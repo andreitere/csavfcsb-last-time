@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day Counter</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-500">
+  <div class="flex h-screen items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-4xl text-red-600">Zile de cand nu s-a mai vorbit de CSA vs FCSB pe grupul de fifa:</h1>
+      <div class="text-6xl mt-5 text-red-600" id="day-counter"></div>
+    </div>
+  </div>
+
+  <script>
+    const startDate = new Date("2023-08-26");
+    startDate.setHours(0, 0, 0, 0);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("day-counter").innerText = diffDays;
+  </script>
+</body>
+</html>
